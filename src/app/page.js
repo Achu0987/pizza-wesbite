@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import ScrollSequence from '@/components/ScrollSequence';
+import AutoScrollControls from '@/components/AutoScrollControls';
 import { Commet } from 'react-loading-indicators';
 
 export default function Home() {
@@ -161,6 +162,9 @@ export default function Home() {
           </span>
         </div>
       </div>
+
+      {/* Auto Scroll Controller UI */}
+      {!isLoading && <AutoScrollControls />}
 
     </main>
   );
