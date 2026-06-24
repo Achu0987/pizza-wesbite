@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import aboutPizzonImg from '../../public/images/about-pizzon.png';
 
 const AboutSection = () => {
   return (
@@ -35,7 +36,7 @@ const AboutSection = () => {
           {/* Use a tall aspect ratio to fit the flying ingredients */}
           <div className="relative w-full max-w-[550px] aspect-[4/5] md:aspect-[3/4]">
             <Image
-              src="/images/about-pizzon.png"
+              src={aboutPizzonImg}
               alt="About Pizzon Flying Ingredients"
               fill
               className="object-contain"

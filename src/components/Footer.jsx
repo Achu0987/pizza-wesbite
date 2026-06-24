@@ -1,4 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
+import menuTopBgImg from '../../public/images/menu-top-bg.png';
+import aboutPizzonImg from '../../public/images/about-pizzon.png';
 
 const Footer = () => {
   return (
@@ -13,8 +16,8 @@ const Footer = () => {
     >
       {/* Top Torn Edge */}
       <div style={{ width: '100%', position: 'relative', zIndex: 10, lineHeight: 0, backgroundColor: '#121619' }}>
-        <img 
-          src="/images/menu-top-bg.png" 
+        <Image 
+          src={menuTopBgImg} 
           alt="Footer top edge" 
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />
@@ -22,8 +25,8 @@ const Footer = () => {
 
       {/* Floating Image at the Top */}
       <div style={{ position: 'absolute', top: '0', right: '0', zIndex: 0, opacity: 0.8, pointerEvents: 'none' }}>
-        <img 
-          src="/images/about-pizzon.png" 
+        <Image 
+          src={aboutPizzonImg} 
           alt="Decorative ingredients" 
           style={{ width: '300px', height: 'auto', transform: 'translateY(-30%)' }}
         />

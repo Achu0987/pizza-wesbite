@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import ourStoryImg from '../../public/images/our-story.png';
 
 const ReservationSection = () => {
   return (
@@ -94,7 +95,7 @@ const ReservationSection = () => {
         <div className="w-full md:w-1/2 flex justify-center items-center relative">
           <div className="relative w-full max-w-[650px] aspect-square">
             <Image
-              src="/images/our-story.png"
+              src={ourStoryImg}
               alt="Our Story"
               fill
               className="object-contain drop-shadow-2xl scale-[1.1]"

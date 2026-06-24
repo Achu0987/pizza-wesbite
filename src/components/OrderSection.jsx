@@ -2,6 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { UtensilsCrossed, Truck, Pizza } from 'lucide-react';
+import orderTopImg from '../../public/images/order-top.png';
+import orderBottomImg from '../../public/images/order-bottom.png';
 
 const OrderSection = () => {
   return (
@@ -9,7 +11,7 @@ const OrderSection = () => {
       {/* Top Torn Edge with Solid White Background to blend with previous section */}
       <div className="w-full relative z-10 leading-none -mb-1 bg-white">
         <Image 
-          src="/images/order-top.png" 
+          src={orderTopImg} 
           alt="Top torn edge" 
           width={1920} 
           height={100} 
@@ -76,7 +78,7 @@ const OrderSection = () => {
       {/* Bottom Torn Edge with Solid White Background to blend with next section */}
       <div className="w-full relative z-10 leading-none -mt-1 bg-white">
         <Image 
-          src="/images/order-bottom.png" 
+          src={orderBottomImg} 
           alt="Bottom torn edge" 
           width={1920} 
           height={100} 

@@ -1,23 +1,26 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import pizza1Img from '../../public/images/pizza1.png';
+import pizza2Img from '../../public/images/pizza2.png';
+import pizzaImg from '../../public/images/pizza.png';
 
 const Speciality = () => {
   const specialities = [
     {
       id: 1,
       name: "MARGHERITA PIZZA",
-      image: "/images/pizza1.png"
+      image: pizza1Img
     },
     {
       id: 2,
       name: "PEPPERONI PIZZA",
-      image: "/images/pizza2.png"
+      image: pizza2Img
     },
     {
       id: 3,
       name: "DOUBLE CHEESE PIZZA",
-      image: "/images/pizza.png"
+      image: pizzaImg
     }
   ];
 

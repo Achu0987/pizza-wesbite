@@ -1,6 +1,12 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import menuBurger1Img from '../../public/images/menu_burger1.png';
+import menuBurger2Img from '../../public/images/menu_burger2.png';
+import menuPizza1Img from '../../public/images/menu_pizza1.png';
+import menuDesert1Img from '../../public/images/menu_desert1.png';
+import menuTopBgImg from '../../public/images/menu-top-bg.png';
+import menuBottomBgImg from '../../public/images/menu-bottom-bg.png';
 
 const SpecialMenu = () => {
   const [activeTab, setActiveTab] = useState('BURGERS');
@@ -8,13 +14,13 @@ const SpecialMenu = () => {
   const tabs = ['ALL', 'BURGERS', 'DESERTS', 'DRINKS', 'PASTA', 'PIZZAS', 'SALADS'];
 
   const allItems = [
-    { id: 1, category: 'BURGERS', name: 'SOLLOW BURGER', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus...', price: '$71.00', image: '/images/menu_burger1.png' },
-    { id: 2, category: 'BURGERS', name: 'FRESH BURGER', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$58.00', image: '/images/menu_burger2.png' },
-    { id: 3, category: 'PIZZAS', name: 'VEGGIE COMBO', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$26.00', image: '/images/menu_pizza1.png' },
-    { id: 4, category: 'DESERTS', name: 'SWEET DELIGHT', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$18.00', image: '/images/menu_desert1.png' },
-    { id: 5, category: 'BURGERS', name: 'CHEESE BURGER', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$45.00', image: '/images/menu_burger1.png' },
-    { id: 6, category: 'PIZZAS', name: 'PEPPERONI', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$30.00', image: '/images/menu_pizza1.png' },
-    { id: 7, category: 'DESERTS', name: 'CHOCO CAKE', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$15.00', image: '/images/menu_desert1.png' },
+    { id: 1, category: 'BURGERS', name: 'SOLLOW BURGER', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus...', price: '$71.00', image: menuBurger1Img },
+    { id: 2, category: 'BURGERS', name: 'FRESH BURGER', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$58.00', image: menuBurger2Img },
+    { id: 3, category: 'PIZZAS', name: 'VEGGIE COMBO', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$26.00', image: menuPizza1Img },
+    { id: 4, category: 'DESERTS', name: 'SWEET DELIGHT', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$18.00', image: menuDesert1Img },
+    { id: 5, category: 'BURGERS', name: 'CHEESE BURGER', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$45.00', image: menuBurger1Img },
+    { id: 6, category: 'PIZZAS', name: 'PEPPERONI', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$30.00', image: menuPizza1Img },
+    { id: 7, category: 'DESERTS', name: 'CHOCO CAKE', description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis...', price: '$15.00', image: menuDesert1Img },
   ];
 
   const filteredItems = activeTab === 'ALL' 
@@ -25,8 +31,8 @@ const SpecialMenu = () => {
     <section className="w-full flex flex-col relative z-20 font-sans mt-0">
       {/* Top Torn Edge */}
       <div className="w-full relative z-10 leading-none -mb-1 bg-[#121619]">
-        <img 
-          src="/images/menu-top-bg.png" 
+        <Image 
+          src={menuTopBgImg} 
           alt="Menu top edge" 
           className="w-full h-auto block"
         />
@@ -128,8 +134,8 @@ const SpecialMenu = () => {
 
       {/* Bottom Torn Edge */}
       <div className="w-full relative z-10 leading-none -mt-1 bg-[#121619]">
-        <img 
-          src="/images/menu-bottom-bg.png" 
+        <Image 
+          src={menuBottomBgImg} 
           alt="Menu bottom edge" 
           className="w-full h-auto block"
         />
