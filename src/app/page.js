@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import ScrollSequence from '@/components/ScrollSequence';
-import AutoScrollControls from '@/components/AutoScrollControls';
 import Speciality from '@/components/Speciality';
 import OrderSection from '@/components/OrderSection';
 import AboutSection from '@/components/AboutSection';
@@ -169,9 +168,6 @@ export default function Home() {
             </span>
           </div>
         </div>
-
-        {/* Auto Scroll Controller UI */}
-        {!isLoading && <AutoScrollControls />}
 
       </main>
       
