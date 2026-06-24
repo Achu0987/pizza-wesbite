@@ -14,8 +14,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Chronos 3D | Luxury Watch Experience",
-  description: "Experience luxury horology in real-time 3D. Explore the exquisite engineering of timeless watches.",
+  title: "Premium Pizza | Authentic Experience",
+  description: "Experience the best authentic wood-fired pizza.",
 };
 
 export default function RootLayout({ children }) {

@@ -20,8 +20,8 @@ export default function ScrollSequence({ onProgress, onLoadingComplete }) {
         onLoadingCompleteRef.current = onLoadingComplete;
     }, [onLoadingComplete]);
 
-    // Loading 1035 frames from public/Frames
-    const frameCount = 1035; 
+    // Loading 240 frames from public/pizza images
+    const frameCount = 240;
     const currentFrameRef = useRef(0);
     const targetFrameRef = useRef(0);
 
@@ -32,12 +32,12 @@ export default function ScrollSequence({ onProgress, onLoadingComplete }) {
 
         for (let i = 1; i <= frameCount; i++) {
             const img = new Image();
-            
-            const padIndex = String(i).padStart(6, '0');
-            const url = `/Frames/frame_${padIndex}.webp`;
-            
+
+            const padIndex = String(i).padStart(3, '0');
+            const url = `/pizza images/frame_${padIndex}.jpg`;
+
             img.src = url;
-            
+
             img.onload = () => {
                 count++;
                 setLoadedCount(count);
@@ -47,7 +47,7 @@ export default function ScrollSequence({ onProgress, onLoadingComplete }) {
                     if (onLoadingCompleteRef.current) onLoadingCompleteRef.current();
                 }
             };
-            
+
             img.onerror = () => {
                 // Fail-safe to avoid hanging in case a frame fails to load
                 count++;
@@ -148,8 +148,8 @@ export default function ScrollSequence({ onProgress, onLoadingComplete }) {
 
 
     return (
-        <canvas 
-            ref={canvasRef} 
+        <canvas
+            ref={canvasRef}
             className="fixed inset-0 w-full h-full object-cover z-0 bg-[#000]"
         />
     );
