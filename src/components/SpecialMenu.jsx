@@ -5,8 +5,7 @@ import menuBurger1Img from '../../public/images/menu_burger1.png';
 import menuBurger2Img from '../../public/images/menu_burger2.png';
 import menuPizza1Img from '../../public/images/menu_pizza1.png';
 import menuDesert1Img from '../../public/images/menu_desert1.png';
-import menuTopBgImg from '../../public/images/menu-top-bg.png';
-import menuBottomBgImg from '../../public/images/menu-bottom-bg.png';
+
 
 const SpecialMenu = () => {
   const [activeTab, setActiveTab] = useState('BURGERS');
@@ -29,14 +28,7 @@ const SpecialMenu = () => {
 
   return (
     <section className="w-full flex flex-col relative z-20 font-sans mt-0">
-      {/* Top Torn Edge */}
-      <div className="w-full relative z-10 leading-none -mb-1 bg-[#121619]">
-        <Image 
-          src={menuTopBgImg} 
-          alt="Menu top edge" 
-          className="w-full h-auto block"
-        />
-      </div>
+
 
       {/* Main Dark Content Area */}
       <div className="w-full bg-[#121619] relative z-0 flex flex-col items-center py-20 px-6">
@@ -132,14 +124,7 @@ const SpecialMenu = () => {
 
       </div>
 
-      {/* Bottom Torn Edge */}
-      <div className="w-full relative z-10 leading-none -mt-1 bg-[#121619]">
-        <Image 
-          src={menuBottomBgImg} 
-          alt="Menu bottom edge" 
-          className="w-full h-auto block"
-        />
-      </div>
+
     </section>
   );
 };

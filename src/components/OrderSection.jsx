@@ -2,22 +2,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { UtensilsCrossed, Truck, Pizza } from 'lucide-react';
-import orderTopImg from '../../public/images/order-top.png';
-import orderBottomImg from '../../public/images/order-bottom.png';
+
 
 const OrderSection = () => {
   return (
     <section className="w-full flex flex-col relative z-20 font-sans mt-0">
-      {/* Top Torn Edge with Solid White Background to blend with previous section */}
-      <div className="w-full relative z-10 leading-none -mb-1 bg-white">
-        <Image 
-          src={orderTopImg} 
-          alt="Top torn edge" 
-          width={1920} 
-          height={100} 
-          className="w-full h-auto object-cover"
-        />
-      </div>
+
 
       {/* Main Orange Content Area */}
       <div className="w-full bg-[#FD9D3E] relative z-0 flex justify-center py-16 px-6">
@@ -75,16 +65,7 @@ const OrderSection = () => {
         </div>
       </div>
 
-      {/* Bottom Torn Edge with Solid White Background to blend with next section */}
-      <div className="w-full relative z-10 leading-none -mt-1 bg-white">
-        <Image 
-          src={orderBottomImg} 
-          alt="Bottom torn edge" 
-          width={1920} 
-          height={100} 
-          className="w-full h-auto object-cover"
-        />
-      </div>
+
     </section>
   );
 };

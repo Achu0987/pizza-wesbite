@@ -5,9 +5,9 @@ import aboutPizzonImg from '../../public/images/about-pizzon.png';
 
 const Footer = () => {
   return (
-    <footer 
-      className="w-full relative z-40" 
-      style={{ 
+    <footer
+      className="w-full relative z-40"
+      style={{
         backgroundColor: '#121619',
         fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         padding: '0 0 30px 0',
@@ -16,74 +16,74 @@ const Footer = () => {
     >
       {/* Top Torn Edge */}
       <div style={{ width: '100%', position: 'relative', zIndex: 10, lineHeight: 0, backgroundColor: '#121619' }}>
-        <Image 
-          src={menuTopBgImg} 
-          alt="Footer top edge" 
+        <Image
+          src={menuTopBgImg}
+          alt="Footer top edge"
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />
       </div>
 
       {/* Floating Image at the Top */}
       <div style={{ position: 'absolute', top: '0', right: '0', zIndex: 0, opacity: 0.8, pointerEvents: 'none' }}>
-        <Image 
-          src={aboutPizzonImg} 
-          alt="Decorative ingredients" 
+        <Image
+          src={aboutPizzonImg}
+          alt="Decorative ingredients"
           style={{ width: '300px', height: 'auto', transform: 'translateY(-30%)' }}
         />
       </div>
 
       <div style={{ padding: '80px 24px 30px', position: 'relative', zIndex: 1 }}>
         {/* Top Section: 3 Columns */}
-        <div 
-          style={{ 
-            width: '100%', 
-            maxWidth: '1300px', 
-            margin: '0 auto', 
-            display: 'flex', 
+        <div
+          style={{
+            width: '100%',
+            maxWidth: '1300px',
+            margin: '0 auto',
+            display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-between',
-            marginBottom: '60px' 
+            marginBottom: '60px'
           }}
         >
-          
+
           {/* Column 1: Logo & Contact */}
           <div style={{ width: '100%', maxWidth: '350px', marginBottom: '40px' }}>
             {/* Logo */}
             <div style={{ marginBottom: '30px' }}>
-              <span 
-                style={{ 
-                  fontFamily: '"Dancing Script", cursive', 
-                  fontSize: '48px', 
+              <span
+                style={{
+                  fontFamily: '"Dancing Script", cursive',
+                  fontSize: '48px',
                   fontWeight: 'bold',
-                  color: '#FBA335' 
+                  color: '#FBA335'
                 }}
               >
                 Piz
               </span>
-              <span 
-                style={{ 
-                  fontFamily: '"Dancing Script", cursive', 
-                  fontSize: '48px', 
+              <span
+                style={{
+                  fontFamily: '"Dancing Script", cursive',
+                  fontSize: '48px',
                   fontWeight: 'bold',
-                  color: 'white' 
+                  color: 'white'
                 }}
               >
                 za
               </span>
             </div>
-            
+
             <p style={{ color: '#d1d5db', lineHeight: '1.8', fontSize: '15px', marginBottom: '25px', margin: 0, paddingBottom: '25px' }}>
-              20 Carrochan Rd, Balloch, Alexandria G83 8EG, UK<br/>
+              20 Carrochan Rd, Balloch, Alexandria G83 8EG, UK<br />
               69QJ+2F Alexandria, United Kingdom
             </p>
-            
+
             <p style={{ color: '#d1d5db', fontSize: '15px', margin: 0, paddingBottom: '25px' }}>
-              <span style={{ color: 'white', fontWeight: 'bold', letterSpacing: '1px', marginRight: '8px' }}>PHONE -</span> 
+              <span style={{ color: 'white', fontWeight: 'bold', letterSpacing: '1px', marginRight: '8px' }}>PHONE -</span>
               +91 123 456 789 0 , +91 123 456 789 0
             </p>
-            
+
             <p style={{ color: '#d1d5db', fontSize: '15px', margin: 0 }}>
-              <span style={{ color: 'white', fontWeight: 'bold', letterSpacing: '1px', marginRight: '8px' }}>EMAIL -</span> 
+              <span style={{ color: 'white', fontWeight: 'bold', letterSpacing: '1px', marginRight: '8px' }}>EMAIL -</span>
               info@gmail.com
             </p>
           </div>
@@ -93,7 +93,7 @@ const Footer = () => {
             <h3 style={{ color: 'white', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '20px', margin: '0 0 35px 0' }}>
               OPENING HOURS
             </h3>
-            
+
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#d1d5db', fontSize: '15px', paddingBottom: '20px' }}>
                 <span>Mon – Tues :</span>
@@ -121,7 +121,7 @@ const Footer = () => {
             <h3 style={{ color: 'white', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '20px', margin: '0 0 35px 0' }}>
               USEFUL LINKS
             </h3>
-            
+
             <ul style={{ display: 'flex', flexDirection: 'column', color: '#d1d5db', fontSize: '15px', margin: 0, padding: 0, listStyle: 'none' }}>
               <li style={{ paddingBottom: '15px' }}><a href="#" style={{ color: '#d1d5db', textDecoration: 'none' }} onMouseOver={(e) => e.target.style.color = '#FBA335'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>Privacy Policy</a></li>
               <li style={{ paddingBottom: '15px' }}><a href="#" style={{ color: '#d1d5db', textDecoration: 'none' }} onMouseOver={(e) => e.target.style.color = '#FBA335'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>Order Tracking</a></li>
@@ -131,27 +131,27 @@ const Footer = () => {
               <li><a href="#" style={{ color: '#d1d5db', textDecoration: 'none' }} onMouseOver={(e) => e.target.style.color = '#FBA335'} onMouseOut={(e) => e.target.style.color = '#d1d5db'}>My account</a></li>
             </ul>
           </div>
-          
+
         </div>
 
         {/* Bottom Section: Copyright & Socials */}
-        <div 
-          style={{ 
-            width: '100%', 
-            maxWidth: '1300px', 
-            margin: '0 auto', 
-            display: 'flex', 
+        <div
+          style={{
+            width: '100%',
+            maxWidth: '1300px',
+            margin: '0 auto',
+            display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-between', 
+            justifyContent: 'space-between',
             alignItems: 'center',
-            paddingTop: '30px', 
-            borderTop: '1px solid rgba(255,255,255,0.05)' 
+            paddingTop: '30px',
+            borderTop: '1px solid rgba(255,255,255,0.05)'
           }}
         >
           <p style={{ color: '#9ca3af', fontSize: '14px', margin: 0 }}>
             © Pizza all Rights Reserved. Designed by <span style={{ color: '#FBA335' }}>Fast Themes</span>
           </p>
-          
+
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {/* Social Icons - simple SVG squares */}
             <a href="#" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#222222', width: '40px', height: '40px', borderRadius: '2px', textDecoration: 'none' }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#FBA335'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#222222'}>
