@@ -36,8 +36,9 @@ export default function Home() {
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? scrollY / maxScroll : 0;
+      const mainElement = document.getElementById('hero-main');
+      const maxScroll = mainElement ? mainElement.offsetHeight - window.innerHeight : window.innerHeight * 9;
+      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, scrollY / maxScroll)) : 0;
 
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
 
@@ -89,7 +90,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative min-h-[1000vh] bg-black select-none">
+      <main id="hero-main" className="relative min-h-[1000vh] bg-black select-none">
 
         {/* High-Performance Canvas Scroll Sequence */}
         <ScrollSequence

@@ -112,10 +112,11 @@ export default function ScrollSequence({ onProgress, onLoadingComplete }) {
 
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = maxScroll > 0 ? scrollY / maxScroll : 0;
+            const mainElement = document.getElementById('hero-main');
+            const maxScroll = mainElement ? mainElement.offsetHeight - window.innerHeight : window.innerHeight * 9;
+            const scrollPercent = maxScroll > 0 ? Math.min(1, Math.max(0, scrollY / maxScroll)) : 0;
 
-            // Maps scroll progress to the entire 731-frame coordinate range
+            // Maps scroll progress to the entire 240-frame coordinate range
             targetFrameRef.current = Math.min(frameCount - 1, Math.max(0, scrollPercent * (frameCount - 1)));
         };
 
