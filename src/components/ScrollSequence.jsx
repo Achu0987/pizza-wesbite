@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { frames } from './frames';
 
 export default function ScrollSequence({ onProgress, onLoadingComplete }) {
     const canvasRef = useRef(null);
@@ -30,13 +31,10 @@ export default function ScrollSequence({ onProgress, onLoadingComplete }) {
         const loadedImages = [];
         let count = 0;
 
-        for (let i = 1; i <= frameCount; i++) {
+        for (let i = 0; i < frameCount; i++) {
             const img = new Image();
 
-            const padIndex = String(i).padStart(3, '0');
-            const url = `/pizza images/frame_${padIndex}.jpg`;
-
-            img.src = url;
+            img.src = frames[i].src;
 
             img.onload = () => {
                 count++;
